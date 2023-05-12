@@ -27,7 +27,6 @@ import java.util.List;
 @AllArgsConstructor
 public class PricesAPIController implements PricesAPI {
 
-    private final ObjectMapper objectMapper;
     private final PriceService priceService;
 
     public ResponseEntity<List<Price>> apiPost(
