@@ -5,18 +5,23 @@ info:
   version: 1.0.0
 servers:
   - url: http://localhost:8080
+tags:
+  - name: Prices
+    description: Prices section of the API
 paths:
   /api:
     post:
-      summary: Get prices
+      tags:
+        - Prices
+      summary: Find prices
       description: Retrieves a list of prices for the given input parameters
       requestBody:
-        description: The request body takes a GetPricesDTO schema object with the filtering parameters
+        description: The request body takes a FindPricesDTO schema object with the filtering parameters
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/GetPricesDTO'
+              $ref: '#/components/schemas/FindPricesDTO'
       responses:
         '200':
           description: OK
@@ -32,7 +37,7 @@ paths:
           description: Internal Server Error
 components:
   schemas:
-    GetPricesDTO:
+    FindPricesDTO:
       type: object
       properties:
         productId:

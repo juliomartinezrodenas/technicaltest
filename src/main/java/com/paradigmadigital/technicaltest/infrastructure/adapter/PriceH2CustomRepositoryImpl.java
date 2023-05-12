@@ -6,7 +6,7 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.criteria.*;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +16,7 @@ class PriceH2CustomRepositoryImpl implements PriceH2CustomRepository {
     private EntityManager entityManager;
 
     @Override
-    public List<PriceH2> findPrices(LocalDateTime date, Integer productId, Integer brandId) {
+    public List<PriceH2> findPrices(OffsetDateTime date, Integer productId, Integer brandId) {
         var criteriaBuilder = entityManager.getCriteriaBuilder();
         var query = criteriaBuilder.createQuery(PriceH2.class);
         var priceH2 = query.from(PriceH2.class);
@@ -39,6 +39,7 @@ class PriceH2CustomRepositoryImpl implements PriceH2CustomRepository {
             query.where(criteriaBuilder
                     .and(predicates.toArray(new Predicate[0])));
         }
+        query.orderBy(criteriaBuilder.desc(priceH2.get("priority")));
         return entityManager.createQuery(query)
                 .getResultList();
     }
