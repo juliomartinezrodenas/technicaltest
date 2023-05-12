@@ -1,0 +1,11 @@
+C:\Users\julio_000\Desktop\technicaltest\src\main\java\com\paradigmadigital\technicaltest\domain\dto\GetPricesDTO.java
+C:\Users\julio_000\Desktop\technicaltest\src\main\java\com\paradigmadigital\technicaltest\domain\entity\Price.java
+C:\Users\julio_000\Desktop\technicaltest\src\main\java\com\paradigmadigital\technicaltest\application\PriceService.java
+C:\Users\julio_000\Desktop\technicaltest\src\main\java\com\paradigmadigital\technicaltest\infrastructure\entity\PriceH2.java
+C:\Users\julio_000\Desktop\technicaltest\src\main\java\com\paradigmadigital\technicaltest\infrastructure\adapter\PriceH2CustomRepository.java
+C:\Users\julio_000\Desktop\technicaltest\src\main\java\com\paradigmadigital\technicaltest\infrastructure\adapter\PriceH2CustomRepositoryImpl.java
+C:\Users\julio_000\Desktop\technicaltest\src\main\java\com\paradigmadigital\technicaltest\TechnicalTestApplication.java
+C:\Users\julio_000\Desktop\technicaltest\src\main\java\com\paradigmadigital\technicaltest\application\PriceServiceImpl.java
+C:\Users\julio_000\Desktop\technicaltest\src\main\java\com\paradigmadigital\technicaltest\domain\port\PriceRepository.java
+C:\Users\julio_000\Desktop\technicaltest\src\main\java\com\paradigmadigital\technicaltest\infrastructure\adapter\PriceH2Repository.java
+C:\Users\julio_000\Desktop\technicaltest\src\main\java\com\paradigmadigital\technicaltest\infrastructure\rest\PricesController.java

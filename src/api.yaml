@@ -1,0 +1,86 @@
+openapi: 3.0.3
+info:
+  title: Paradigma Digital Technical Test 
+  description: API designed for th technical test for Paradigma Digital's hiring process
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /api:
+    post:
+      summary: Get prices
+      description: Retrieves a list of prices for the given input parameters
+      requestBody:
+        description: The request body takes a GetPricesDTO schema object with the filtering parameters
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GetPricesDTO'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Price'
+        '400':
+          description: Bad Request
+        '500':
+          description: Internal Server Error
+components:
+  schemas:
+    GetPricesDTO:
+      type: object
+      properties:
+        productId:
+          type: integer
+          description: Product Id that the prices returned must match
+        brandId:
+          type: integer
+          description: Brand Id that the prices returned must match
+        date:
+          type: string
+          description: Date in which the price is applicable. If the date is later or equal to the price's start date and previous or equal to the end date then it will be matched
+          format: date-time
+    Price:
+      type: object
+      properties:
+        priceId:
+          type: integer
+          description: Identifier of the Price object. Must be unique
+        brandId:
+          type: integer
+          description: Identifier of the price's brand
+        productId:
+          type: integer
+          description: Identifier of the price's product
+        startDate:
+          type: string
+          description: The price's application start date
+          format: date-time
+        endDate:
+          type: string
+          description: The price's application end date
+          format: date-time
+        priority:
+          type: number
+          description: Priority value of the Price. Higher value prices will be shown first in the response
+        price:
+          type: number
+          description: Amount value of the price
+          format: double
+        currency:
+          type: string
+          description: ISO-4217 currency code of the price's amount
+      required:
+        - priceId
+        - brandId
+        - productId
+        - startDate
+        - endDate
+        - priority
+        - price
+        - currency

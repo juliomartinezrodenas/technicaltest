@@ -1,0 +1,12 @@
+com\paradigmadigital\technicaltest\infrastructure\adapter\PriceH2CustomRepositoryImpl.class
+com\paradigmadigital\technicaltest\TechnicalTestApplication.class
+com\paradigmadigital\technicaltest\domain\entity\Price.class
+com\paradigmadigital\technicaltest\infrastructure\rest\PricesController.class
+com\paradigmadigital\technicaltest\domain\dto\GetPricesDTO.class
+com\paradigmadigital\technicaltest\domain\dto\GetPricesDTO$GetPricesDTOBuilder.class
+com\paradigmadigital\technicaltest\infrastructure\entity\PriceH2.class
+com\paradigmadigital\technicaltest\domain\port\PriceRepository.class
+com\paradigmadigital\technicaltest\application\PriceServiceImpl.class
+com\paradigmadigital\technicaltest\infrastructure\adapter\PriceH2Repository.class
+com\paradigmadigital\technicaltest\application\PriceService.class
+com\paradigmadigital\technicaltest\infrastructure\adapter\PriceH2CustomRepository.class
