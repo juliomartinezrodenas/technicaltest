@@ -9,19 +9,20 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SwaggerDocumentationConfig {
 
-    @Bean
-    public OpenAPI openApi() {
-        return new OpenAPI()
-            .info(new Info()
-                .title("Paradigma Digital Technical Test")
-                .description("API designed for th technical test for Paradigma Digital's hiring process")
-                .termsOfService("")
-                .version("1.0.0")
-                .license(new License()
-                    .name("")
-                    .url("http://unlicense.org"))
-                .contact(new io.swagger.v3.oas.models.info.Contact()
-                    .email("")));
-    }
+  @Bean
+  public OpenAPI openApi() {
+    return new OpenAPI()
+        .info(new Info()
+            .title("Paradigma Digital Technical Test")
+            .description(
+                "API designed for the technical test for Paradigma Digital's hiring process")
+            .termsOfService("")
+            .version("1.0.0")
+            .license(new License()
+                .name("")
+                .url("http://unlicense.org"))
+            .contact(new io.swagger.v3.oas.models.info.Contact()
+                .email("")));
+  }
 
 }

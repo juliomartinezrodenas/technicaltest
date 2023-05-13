@@ -3,16 +3,16 @@ package com.paradigmadigital.technicaltest.domain.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.Valid;
-import org.springframework.validation.annotation.Validated;
-
 import java.time.OffsetDateTime;
 import java.util.Objects;
+import org.springframework.validation.annotation.Validated;
 
 /**
  * FindPricesDTO
  */
 @Validated
 public class FindPricesDTO {
+
   @JsonProperty("productId")
   private Integer productId = null;
 
@@ -29,11 +29,12 @@ public class FindPricesDTO {
 
   /**
    * Product Id that the prices returned must match
+   *
    * @return productId
    **/
   @Schema(description = "Product Id that the prices returned must match")
-  
-    public Integer getProductId() {
+
+  public Integer getProductId() {
     return productId;
   }
 
@@ -48,11 +49,12 @@ public class FindPricesDTO {
 
   /**
    * Brand Id that the prices returned must match
+   *
    * @return brandId
    **/
   @Schema(description = "Brand Id that the prices returned must match")
-  
-    public Integer getBrandId() {
+
+  public Integer getBrandId() {
     return brandId;
   }
 
@@ -66,13 +68,15 @@ public class FindPricesDTO {
   }
 
   /**
-   * Date in which the price is applicable. If the date is later or equal to the price's start date and previous or equal to the end date then it will be matched
+   * Date in which the price is applicable. If the date is later or equal to the price's start date
+   * and previous or equal to the end date then it will be matched
+   *
    * @return date
    **/
   @Schema(description = "Date in which the price is applicable. If the date is later or equal to the price's start date and previous or equal to the end date then it will be matched")
-  
-    @Valid
-    public OffsetDateTime getDate() {
+
+  @Valid
+  public OffsetDateTime getDate() {
     return date;
   }
 
@@ -104,7 +108,7 @@ public class FindPricesDTO {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FindPricesDTO {\n");
-    
+
     sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
     sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
@@ -113,8 +117,8 @@ public class FindPricesDTO {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first
+   * line).
    */
   private String toIndentedString(Object o) {
     if (o == null) {
