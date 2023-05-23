@@ -6,7 +6,6 @@ import com.paradigmadigital.technicaltest.domain.entity.Price;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.annotation.Generated;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.AllArgsConstructor;

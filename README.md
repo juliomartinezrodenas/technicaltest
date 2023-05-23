@@ -4,15 +4,23 @@ Technical test for the hiring process
 
 ## Design choices
 
-This application was created using JDK 17 and Spring Boot 3 as a basis, with the Lombok library to reduce boilerplate code. 
+This application was created using JDK 17 and Spring Boot 3 as a basis, with the Lombok library to
+reduce boilerplate code.
 
-An API YAML definition file was created to define the API structure and swagger-codegen was used to generate the starting code and its annotations, but was later refined to accomodate newer dependencies and `springfox-swagger-ui` was replaced with `springdoc` for easier integration with OpenAPI Specification 3.0
+An API YAML definition file was created to define the API structure and swagger-codegen was used to
+generate the starting code and its annotations, but was later refined to accomodate newer
+dependencies and `springfox-swagger-ui` was replaced with `springdoc` for easier integration with
+OpenAPI Specification 3.0
 
-The API structure follows JSON REST patterns. Even though the defined use case is the retrieval of data, it's been decided to implement it using a POST endpoint instead of GET for a more convenient data input experience
+The API structure follows JSON REST patterns. Even though the defined use case is the retrieval of
+data, it's been decided to implement it using a POST endpoint instead of GET for a more convenient
+data input experience
 
-The code follows the hexagonal architecture for complete decoupling of the domain, application and infrastructure layers.
+The code follows the hexagonal architecture for complete decoupling of the domain, application and
+infrastructure layers.
 
-The database for this application is an H2 in-memory database that loads the `import.sql` data every time the application starts.
+The database for this application is an H2 in-memory database that loads the `import.sql` data every
+time the application starts.
 
 ## System Requirements
 
@@ -51,16 +59,24 @@ docker run -p 8080:8080 paradigmadigital/technicaltest
 
 ## Access endpoints
 
-Assuming that the application is running locally and on the default 8080 port, you can access its different features with the following urls:
+Assuming that the application is running locally and on the default 8080 port, you can access its
+different features with the following urls:
 
-* http://localhost:8080/api to access the API directly
 * http://localhost:8080/swagger-ui/index.html to access the API's Swagger UI
-* http://localhost:8080/h2 to access the H2 Database console. Make sure the connection credentials are as follows:
+* http://localhost:8080/h2 to access the H2 Database console. Make sure the connection credentials
+  are as follows:
   * **JDBC URL** field set to `jdbc:h2:mem:testdb`
   * **User name** field set to `admin`
   * **Password** field must be empty
 
-A file named `TechnicalTest.postman_collection.json` is also included to load into Postman which includes a set of API requests that mirror the test cases defined for this test, as well as a separate request to more freely test the API endpoint 
+Addictionally, `http://localhost:8080/api` is the base URL to interact with the API endpoints. It is
+used by
+the Postman collection provided on this repository for testing. Not meant to be accessed directly
+by the browser
 
+A file named `TechnicalTest.postman_collection.json` is also included to load into Postman which
+includes a set of API requests that mirror the test cases defined for this test, as well as a
+separate request to more freely test the API endpoint
 
-Made with ♥️ by [Julio Martínez](https://www.linkedin.com/in/julio-mart%C3%ADnez-r%C3%B3denas-892bb5104/)
+Made with ♥️
+by [Julio Martínez](https://www.linkedin.com/in/julio-mart%C3%ADnez-r%C3%B3denas-892bb5104/)
